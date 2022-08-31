@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./images/favicon.png";
+import carrito from "./images/carrito.png";
 
 const Navbar = () => {
   return (
@@ -24,6 +25,9 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <a className="nav-link link_header" href="#">Contacto</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#"><img src={carrito} width="48" alt="Carrito" /></a>
         </li>
       </ul>
     </div>
