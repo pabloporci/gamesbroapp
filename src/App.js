@@ -1,6 +1,7 @@
 import './estilos.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/ItemCount';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
 
       <hr />
+      <ItemCount stock={5} initial={1} onAdd={0} />
       <div>
         <ItemListContainer greeting={saludo} />
       </div>
