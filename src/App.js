@@ -15,7 +15,9 @@ function App() {
       <hr />
       <ItemCount stock={5} initial={1} onAdd={0} />
       <div>
-        <ItemListContainer greeting={saludo} />
+        {/* <ItemListContainer greeting={saludo} /> */}
+        <ItemListContainer />
+
       </div>
     </div>
 

@@ -39,3 +39,11 @@
 .productos-parrafo {
   color: antiquewhite
 }
+
+.item {
+  height: 100%;
+}
+
+.titulo-parrafo {
+  color: darkblue;
+}
