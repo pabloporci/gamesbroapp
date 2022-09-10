@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="container">
       <h1 className="letra_titulo">Games Bro</h1>
       <h3 className="letra_titulo">El sitio gamer hecho para vos</h3>
-      <ul class="nav d-flex align-items-center">
+      <ul className="nav d-flex align-items-center">
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="#"><img src={logo} width="48" alt="Games Bro" /></a>
         </li>
@@ -28,7 +28,7 @@ const Navbar = () => {
         </li>
         <CartWidget />
       </ul>
-    </div>
+    </div >
   )
 }
 
