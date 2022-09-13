@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./images/favicon.png";
 import CartWidget from "./CartWidget";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div className="container">
       <h1 className="letra_titulo">Games Bro</h1>
@@ -32,4 +32,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default NavBar;
