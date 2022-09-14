@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "./images/favicon.png";
 import CartWidget from "./CartWidget";
 
@@ -9,22 +10,19 @@ const NavBar = () => {
       <h3 className="letra_titulo">El sitio gamer hecho para vos</h3>
       <ul className="nav d-flex align-items-center">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#"><img src={logo} width="48" alt="Games Bro" /></a>
+          <Link className="nav-link active" aria-current="page" to="/inicio"><img src={logo} width="48" alt="Games Bro" /></Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link link_header" href="#">Inicio</a>
+          <Link className="nav-link link_header" to="/inicio">Inicio</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link link_header" href="#">Tienda</a>
+          <Link className="nav-link link_header" to="/playstation">PlayStation</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link link_header" href="#">Consolas</a>
+          <Link className="nav-link link_header" to="/nintendo">Nintendo</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link link_header" href="#">Preventa</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link link_header" href="#">Contacto</a>
+          <Link className="nav-link link_header" to="/contacto">Contacto</Link>
         </li>
         <CartWidget />
       </ul>

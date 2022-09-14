@@ -1,14 +1,22 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import { useNavigate } from "react-router-dom";
 
-const Item = ({ item, onDetailClick }) => {
+const Item = ({ item }) => {
+
+  const naviate = useNavigate()
+
   const detailClick = () => {
-    onDetailClick(item.id)
-
+    naviate('/details/' + item.id)
   }
+
+  const getUrlImg = (url) => {
+    return url.slice(0, -5).concat('O.jpg')
+  }
+
   return (
     <div className="card item">
-      <img src={item.thumbnail} className="card-img-top" alt={item.title} />
+      <img src={getUrlImg(item.thumbnail)} className="card-img-top" alt={item.title} />
       <div className="card-body">
         <h5 className="card-title text-center titulo-parrafo"><b>{item.title}</b></h5>
 
