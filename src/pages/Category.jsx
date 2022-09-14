@@ -2,7 +2,10 @@ import React from 'react'
 import { useParams, Outlet } from 'react-router-dom';
 import ItemDetailContainer from '../components/ItemDetailContainer';
 
-const Details = () => {
+
+
+
+const Category = () => {
 
   const { id } = useParams()
 
@@ -14,4 +17,4 @@ const Details = () => {
   )
 }
 
-export default Details
+export default Category

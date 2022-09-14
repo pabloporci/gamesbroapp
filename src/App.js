@@ -12,7 +12,8 @@ import Inicio from './pages/Inicio'
 import Contacto from './pages/Contacto'
 import Playstation from './pages/Playstation'
 import Nintendo from "./pages/Nintendo";
-import Details from "./pages/Details";
+import Category from "./pages/Category";
+
 
 
 function App() {
@@ -38,12 +39,15 @@ function App() {
 
           {/* </div> */}
 
+          {/* Explicacion del Routing:
+          La pagina es navegable tanto desde el menu del NavBar como desde la url, eligiendo con la / + nombre de la categoria.
+          En cada uno de los articulos es posible ver el detalle del contenido. */}
 
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/playstation" element={<Playstation />} />
           <Route path="/nintendo" element={<Nintendo />} />
-          <Route path="/details/:id" element={<Details />} />
+          <Route path="/category/:id" element={<Category />} />
 
         </Routes>
 
