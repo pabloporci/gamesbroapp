@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Outlet } from 'react-router-dom';
-import ItemDetailContainer from '../components/ItemDetailContainer';
+import ItemDetailContainer from '../components/ItemDetailsContainer/ItemDetailContainer';
 
 
 

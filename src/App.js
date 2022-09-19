@@ -1,61 +1,35 @@
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home/Home.jsx';
+import Cart from './components/Cart/Cart';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailContainer';
+import Provider from './components/Context/Context';
 
 import './estilos.css';
-import Navbar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
-import Footer from "./components/Footer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import { useState } from "react";
-import NavBar from "./components/NavBar";
-import Inicio from './pages/Inicio'
-import Contacto from './pages/Contacto'
-import Playstation from './pages/Playstation'
-import Nintendo from "./pages/Nintendo";
-import Category from "./pages/Category";
-
-
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
-
-  // const saludo = "Bienvenido a nuestro sitio donde encontraras tu videojuego favorito"
-  const [selectedItem, setSelectedItem] = useState(null)
-
-
   return (
-    <BrowserRouter>
-      <div className='container-fluid fondo_azul'>
-        <NavBar />
+    <Provider>
+      <BrowserRouter>
 
-        <hr />
-        <h1 className="text-center">
-          Aprovecha nuestras ofertas
-        </h1>
-        <hr />
         <Routes>
-          {/* <div> */}
-          {/* <ItemListContainer onDetailClick={setSelectedItem} />
-          <ItemDetailContainer itemId={selectedItem} /> */}
+          <Route path={"/"} element={<Home />} />
 
-          {/* </div> */}
+          <Route path={"/category/:id"} element={<ItemListContainer />} />
+          <Route path={"/tienda"} element={<ItemListContainer />} />
+          <Route path={"/item/:id"} element={<ItemDetailsContainer />} />
+          <Route path={"/cart"} element={<Cart />} />
 
-          {/* Explicacion del Routing:
-          La pagina es navegable tanto desde el menu del NavBar como desde la url, eligiendo con la / + nombre de la categoria.
-          En cada uno de los articulos es posible ver el detalle del contenido. */}
-
-          <Route path="/inicio" element={<Inicio />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/playstation" element={<Playstation />} />
-          <Route path="/nintendo" element={<Nintendo />} />
-          <Route path="/category/:id" element={<Category />} />
 
         </Routes>
 
-        <Footer />
-      </div>
-    </BrowserRouter>
 
-
+      </BrowserRouter>
+    </Provider>
   );
 }
 

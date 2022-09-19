@@ -1,26 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import ItemListContainer from '../components/ItemListContainer';
+import React from "react";
+import Header from "../Header";
+import Footer from "../Footer";
 
 const Playstation = () => {
-
-  const [items, setItems] = useState([])
-
-  useEffect(() => {
-    fetch("https://api.mercadolibre.com/sites/MLA/search?q=juego+ps5&limit=12")
-      .then((respuesta) => respuesta.json())
-      .then((data) => {
-        console.log(data.results);
-        setItems(data.results);
-      })
-
-
-  }, []);
-
   return (
-    <div>
-      <ItemListContainer items={items} onDetailClick={() => null} />
+    <div className="container-fluid fondo_azul">
+      <Header>
+
+      </Header>
+
+      <Footer />
     </div>
   )
 }
 
-export default Playstation
+export default Playstation;
