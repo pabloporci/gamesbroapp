@@ -1,3 +1,10 @@
+Mi proyecto GamesBro intenta ser una página dedicada al mundo de los videojuegos. Con una tienda con carrito para comprar
+tu juego que buscas y las últimas novedades gamer.
+El sitio se va adaptando a los desafios del curso, priorizando los puntos pedidos en el mismo.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

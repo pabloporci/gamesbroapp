@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import carrito from "../images/carrito.png";
-import { CartContext } from "../Context/Context";
+import { CartContext } from "../../Context/CartContext";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -13,6 +13,8 @@ const CartWidget = () => {
     let total_items = cart.reduce((total, item) => total += item.cantidad, 0);
     setTotal(total_items);
   }, [cart]);
+
+
 
   return (
     <Link to={"/cart"}>

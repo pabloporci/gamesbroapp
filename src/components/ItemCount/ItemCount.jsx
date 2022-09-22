@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { CartContext } from "../Context/Context";
+import { CartContext } from "../../Context/CartContext";
 
 const ItemCount = (props) => {
   const { item, onAdd } = props;
@@ -36,14 +36,14 @@ const ItemCount = (props) => {
         <p>
           <input
             type="button"
-            className="btn fondo_naranja ml-5"
+            className="btn fondo_negro "
             value="-"
             onClick={() => { decrementarCantidad(counter - 1) }}
           />
           {counter}
           <input
             type="button"
-            className="btn fondo_naranja mr-3"
+            className="btn fondo_negro"
             value="+"
             onClick={() => { incrementarCantidad(counter + 1) }}
           />
