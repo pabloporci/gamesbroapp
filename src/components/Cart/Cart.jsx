@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext';
+import Header from '../Header';
 
 const Cart = () => {
   const { cart, deleteOne, deleteAll, cartTotal } = useContext(CartContext);
 
   return (
     <div className="container-fluid fondo_azul">
+      <Header />
       <section>
         <h2 className="letra_titulo" >Carrito de compras</h2>
         {cart.map((item) => (
