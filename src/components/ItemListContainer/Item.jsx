@@ -12,6 +12,8 @@ const Item = ({ item }) => {
 
           <p className="card-text text-center titulo-parrafo">${item.precio}</p>
 
+          <p className="card-text text-center titulo-parrafo">{item.category}</p>
+
 
         </div>
       </Link>
