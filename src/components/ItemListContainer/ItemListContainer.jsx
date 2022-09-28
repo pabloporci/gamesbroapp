@@ -29,12 +29,22 @@ const ItemListContainer = () => {
     const db = getFirestore();
 
     const productsCollection = collection(db, "products");
-    const queryItems = id ? query(productsCollection, where("category", "==", id)) : productsCollection
 
-    // const productsCollection = collection(db, "products");
+    const queryItems = id ? query(productsCollection, where("category", "==", id)) : productsCollection;
+    getDocs(queryItems).then((snapShot) => {
+      if (snapShot.size > 0) {
+        setItems(snapShot.docs.map(item => ({ id: item.id, ...item.data() })));
 
-    getDocs(productsCollection).then(data => {
-      setItems(data.docs.map(item => ({ id: item.id, ...item.data() })));
+      }
+
+
+
+      // const queryItems = id ? query(productsCollection, where("category", "==", id)) : productsCollection
+
+      // const productsCollection = collection(db, "products");
+
+      // getDocs(productsCollection).then(data => {
+      //   setItems(data.docs.map(item => ({ id: item.id, ...item.data() })));
     });
   }, [id]);
 
