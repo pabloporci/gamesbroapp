@@ -34,7 +34,7 @@ const ItemDetails = ({ item }) => {
         {
           addedProduct ?
 
-            (<button className="btn btn-primary">Terminar compra</button>) && <Link to="/cart">Ir al carrito</Link> :
+            (<button className="btn btn-primary">Terminar compra</button>) && <Link to="/cart">Terminar Compra</Link> :
 
 
 
