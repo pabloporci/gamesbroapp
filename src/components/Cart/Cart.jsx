@@ -1,15 +1,23 @@
 import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext';
 import Header from '../Header';
+import { Link } from "react-router-dom";
+import carrito from "../images/carrito.png";
 
 const Cart = () => {
   const { cart, deleteOne, deleteAll, cartTotal } = useContext(CartContext);
+
+  // if (cart.length === 0) {
+  //   return <Link to="/tienda">tienda</Link>;
+  // }
 
   return (
     <div className="container-fluid fondo_azul">
       <Header />
       <section>
+
         <h2 className="letra_titulo" >Carrito de compras</h2>
+
         {cart.map((item) => (
           <div key={item.id}>
             <h2 className='letra_titulo'>{item.nombre}</h2>
@@ -22,7 +30,15 @@ const Cart = () => {
             </button>
           </div>
         ))}
-        <button onClick={deleteAll}>Delete all</button>
+
+        <button onClick={deleteAll}>Delete all
+
+
+        </button>
+
+
+
+
       </section>
       {cart.length && (
         <section className='letra_titulo'>
@@ -42,9 +58,16 @@ const Cart = () => {
             <div>
               <h1>TOTAL: ${cartTotal()}</h1>
             </div>
+            <div>
+              <Link to={"/checkout"} title="Finalizar Compra">
+                <button className="btn fondo_naranja">Finalizar Compra <img src={carrito} alt="Finalizar Compra" width="16" /></button>
+              </Link>
+
+            </div>
           </main>
         </section>)
       }
+
     </div>
   );
 };
