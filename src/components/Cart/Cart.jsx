@@ -7,9 +7,7 @@ import carrito from "../images/carrito.png";
 const Cart = () => {
   const { cart, deleteOne, deleteAll, cartTotal } = useContext(CartContext);
 
-  // if (cart.length === 0) {
-  //   return <Link to="/tienda">tienda</Link>;
-  // }
+
 
   return (
     <div className="container-fluid fondo_azul">
@@ -31,21 +29,21 @@ const Cart = () => {
           </div>
         ))}
 
-        <button onClick={deleteAll}>Delete all
 
 
-        </button>
 
 
 
 
       </section>
-      {cart.length && (
+      {cart.length ? (
         <section className='letra_titulo'>
+
           <header>
             <h3>Detalle total</h3>
           </header>
           <main>
+            <button onClick={deleteAll}>Delete all</button>
             {
               cart.map(item => (
                 <div className='d-flex flex-column mt-2'>
@@ -65,7 +63,11 @@ const Cart = () => {
 
             </div>
           </main>
-        </section>)
+        </section>) : (
+        <h2 className='productos-parrafo'>
+          No hay productos seleccionados
+        </h2>
+      )
       }
 
     </div>

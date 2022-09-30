@@ -7,6 +7,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailContainer';
 import CartProvider from './Context/CartContext';
 
+
 import './estilos.css';
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -23,6 +24,7 @@ function App() {
           <Route path={"/tienda"} element={<ItemListContainer />} />
           <Route path={"/item/:id"} element={<ItemDetailsContainer />} />
           <Route path={"/cart"} element={<Cart />} />
+
 
 
         </Routes>
