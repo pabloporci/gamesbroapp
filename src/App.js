@@ -6,11 +6,10 @@ import Cart from './components/Cart/Cart';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailContainer';
 import CartProvider from './Context/CartContext';
-
-
 import './estilos.css';
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import Checkout from "./components/Checkout/Checkout.jsx";
 
 function App() {
   return (
@@ -24,6 +23,7 @@ function App() {
           <Route path={"/tienda"} element={<ItemListContainer />} />
           <Route path={"/item/:id"} element={<ItemDetailsContainer />} />
           <Route path={"/cart"} element={<Cart />} />
+          <Route path={"/checkout"} element={<Checkout />} />
 
 
 
