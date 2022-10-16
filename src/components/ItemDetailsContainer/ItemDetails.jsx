@@ -8,8 +8,7 @@ const ItemDetails = ({ item }) => {
   const { addItem } = useContext(CartContext);
   const [counter, setCounter] = useState(0);
   const [addedProduct, setAddedProduct] = useState(false)
-  /* const [prod, setProd] = useState(item);
-  console.log(prod); */
+
   const onAdd = (item, counter) => {
     setCounter(counter);
     addItem(item, counter);

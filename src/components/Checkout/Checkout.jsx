@@ -5,7 +5,7 @@ import Success from "../Success/Success";
 
 const Checkout = () => {
 
-  const { cart, addItem, clear, isInCart, sumarCantidad, deleteAll, totalUnidades, deleteOne, cartTotal } = useContext(CartContext);
+  const { cart, clear, cartTotal } = useContext(CartContext);
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -59,7 +59,7 @@ const Checkout = () => {
               <tbody>
                 {cart.map(item => (
                   <tr key={item.id}>
-                    {/* <td className="text-start"><img src={"images/" + item.imagen} alt={item.nombre} title={item.nombre} width="120" /></td> */}
+
                     <td className="text-start letra_titulo"><img src={item.imagen} alt={item.nombre} title={item.nombre} width="120" /></td>
                     <td className="text-start align-middle letra_titulo">{item.nombre} x {item.cantidad}</td>
                     <td className="text-end align-middle letra_titulo">${item.cantidad * item.precio}</td>
@@ -80,31 +80,3 @@ const Checkout = () => {
 
 export default Checkout;
 
-// import React from 'react';
-// import { useState } from 'react';
-// import Form from './Form';
-
-// const Checkout = () => {
-//   const [orderId, setOrderId] = useState('');
-
-//   const handleId = (numeroDeOrden) => {
-//     setOrderId(numeroDeOrden);
-//   };
-
-//   if (orderId) {
-//     return (
-//       <h1>
-//         Gracias por tu compra, te dejamos el número de seguimiento:{' '}
-//         {orderId}
-//       </h1>
-//     );
-//   }
-
-//   return (
-//     <div>
-//       <Form handleId={handleId} />
-//     </div>
-//   );
-// };
-
-// export default Checkout;

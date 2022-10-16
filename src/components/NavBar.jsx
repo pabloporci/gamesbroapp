@@ -11,16 +11,16 @@ const NavBar = () => {
       name: 'Home'
     },
     {
-      route: "/playstation",
+      route: "/category/playstation",
       name: "Playstation"
     },
     {
-      route: "/nintendo",
+      route: "/category/nintendo",
       name: "Nintendo"
     },
     {
-      route: "/contacto",
-      name: "Contacto"
+      route: "/pages/proximamente",
+      name: "Proximamente"
     },
   ]
 
@@ -32,13 +32,14 @@ const NavBar = () => {
         <Logo />
         {
           navItemList.map(navItem => (
-            <li className="nav-item">
+            <li key={navItem.name} className="nav-item">
               <Link className="nav-link link_header" to={navItem.route}>{navItem.name}</Link>
             </li>
           ))
         }
 
       </ul>
+      <CartWidget />
     </div >
   )
 }

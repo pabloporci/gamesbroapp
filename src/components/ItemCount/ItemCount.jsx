@@ -1,9 +1,7 @@
-import React, { useState, useContext } from "react";
-import { CartContext } from "../../Context/CartContext";
+import React, { useState } from "react";
 
 const ItemCount = (props) => {
   const { item, onAdd } = props;
-  const { cart, setCart, addItem } = useContext(CartContext);
   const [counter, setCounter] = useState(props.initial);
   const [itemStock, setItemStock] = useState(5);
 
@@ -21,7 +19,6 @@ const ItemCount = (props) => {
 
   const agregarProductos = () => {
     if (counter <= itemStock) {
-      addItem(item, counter);
       setItemStock(itemStock - counter);
       console.log(onAdd)
       if (onAdd) {
