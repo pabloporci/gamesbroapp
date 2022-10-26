@@ -20,7 +20,7 @@ const ItemCount = (props) => {
   const agregarProductos = () => {
     if (counter <= itemStock) {
       setItemStock(itemStock - counter);
-      console.log(onAdd)
+
       if (onAdd) {
         onAdd(item, counter)
       }

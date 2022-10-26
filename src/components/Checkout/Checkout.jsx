@@ -40,19 +40,19 @@ const Checkout = () => {
       {cartTotal() > 0 ?
         <div className="row">
           <div className="col-md-4 offset-md-2">
-            <div class="mb-3 ">
-              <label for="nombre" class="form-label letra_titulo">Nombre</label>
-              <input type="text" class="form-control" id="nombre" onInput={(e) => setNombre(e.target.value)} />
+            <div className="mb-3 ">
+              <label className="form-label letra_titulo">Nombre</label>
+              <input type="text" className="form-control" id="nombre" onInput={(e) => setNombre(e.target.value)} />
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label letra_titulo">Email</label>
-              <input type="text" class="form-control" id="email" onInput={(e) => setEmail(e.target.value)} />
+              <label className="form-label letra_titulo">Email</label>
+              <input type="text" className="form-control" id="email" onInput={(e) => setEmail(e.target.value)} />
             </div>
             <div class="mb-3">
-              <label for="telefono" class="form-label letra_titulo">Teléfono</label>
-              <input type="text" class="form-control" id="telefono" onInput={(e) => setTelefono(e.target.value)} />
+              <label className="form-label letra_titulo">Teléfono</label>
+              <input type="text" className="form-control" id="telefono" onInput={(e) => setTelefono(e.target.value)} />
             </div>
-            <button type="button" class="btn btn-success" onClick={() => { sendOrder() }}>Generar Orden</button>
+            <button type="button" className="btn btn-success" onClick={() => { sendOrder() }}>Generar Orden</button>
           </div>
           <div className="col-md-4">
             <table className="table">

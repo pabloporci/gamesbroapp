@@ -48,7 +48,7 @@ const Cart = () => {
             <button onClick={deleteAll}>Delete all</button>
             {
               cart.map(item => (
-                <div className='d-flex flex-column mt-2'>
+                <div key={item.id} className='d-flex flex-column mt-2'>
                   <span>{item.nombre}</span>
                   <span className='ml-2'>cantidad: {item.cantidad} precio {item.precio}</span>
                   <span className='ml-2'>subtotal {item.cantidad * item.precio}</span>
