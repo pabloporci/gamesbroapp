@@ -48,7 +48,7 @@ const Checkout = () => {
               <label className="form-label letra_titulo">Email</label>
               <input type="text" className="form-control" id="email" onInput={(e) => setEmail(e.target.value)} />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
               <label className="form-label letra_titulo">Teléfono</label>
               <input type="text" className="form-control" id="telefono" onInput={(e) => setTelefono(e.target.value)} />
             </div>
